@@ -41,12 +41,12 @@ router.post('/register', async (req, res) => {
 
         if (errors.length > 0) {
             //if errors again render registration form
-            // res.render('register',{
-            //     errors,
-            //     name,
-            //     email,
-            //     password
-            // })
+            res.render('register', {
+                errors,
+                name,
+                email,
+                password
+            })
             console.log(errors)
             return res.json(errors)
         }
